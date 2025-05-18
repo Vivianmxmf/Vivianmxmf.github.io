@@ -1,0 +1,408 @@
+/* Global Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f7; /* Apple-like light gray background */
+    color: #1d1d1f; /* Apple-like dark gray text */
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #000; /* Near black for headings */
+    font-weight: 600;
+}
+
+a {
+    color: #007aff; /* Apple blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigation */
+header {
+    background-color: rgba(255, 255, 255, 0.7); /* Translucent white like Apple nav */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #1d1d1f;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    font-size: 1em;
+    color: #1d1d1f;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #007aff; /* Apple blue for active/hover link */
+    border-bottom: 2px solid #007aff;
+}
+
+/* Hero Sections Common Style */
+#hero, #interests-hero, #blog-hero, #highlights-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #fff; /* White background for hero sections */
+    border-radius: 18px; /* Apple-like rounded corners */
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.hero-content h1 {
+    font-size: 3.5em; /* Larger font for main hero title */
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    color: #555;
+    margin-bottom: 1.5em;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Profile Picture on Home */
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Circular profile picture */
+    margin: 20px auto;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.cta-button, .read-more-button, .details-button {
+    display: inline-block;
+    background-color: #007aff; /* Apple blue */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px; /* Slightly rounded buttons */
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover, .read-more-button:hover, .details-button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* About Section on Home */
+#about {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 18px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+#about h2, #quick-links h2, #interest-list h2, #blog-posts h2, #highlight-list h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Quick Links Section on Home */
+#quick-links {
+    padding: 40px 0;
+}
+
+.quick-links-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.quick-link-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quick-link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-decoration: none;
+}
+
+.quick-link-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #1d1d1f;
+}
+
+.quick-link-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Interests Page */
+.interests-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.interest-card {
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.interest-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.interest-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #1d1d1f;
+}
+
+.interest-card p {
+    font-size: 0.95em;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* Blog Page */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.blog-post-card {
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-banner-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.blog-post-card h3 {
+    font-size: 1.7em;
+    margin-bottom: 8px;
+}
+
+.blog-post-card h3 a {
+    color: #1d1d1f;
+}
+.blog-post-card h3 a:hover {
+    color: #007aff;
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.blog-post-card p {
+    font-size: 1em;
+    color: #333;
+    flex-grow: 1; /* Makes text take available space */
+    margin-bottom: 20px;
+}
+
+.read-more-button {
+    align-self: flex-start; /* Aligns button to the left */
+}
+
+/* Highlights Page */
+.highlights-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.highlight-card {
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.highlight-card h3 {
+    font-size: 1.7em;
+    margin-bottom: 8px;
+    color: #1d1d1f;
+}
+
+.highlight-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.highlight-card p {
+    font-size: 1em;
+    color: #333;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.details-button {
+     align-self: flex-start;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e9e9eb; /* Slightly darker gray for footer */
+    color: #555;
+    font-size: 0.9em;
+    margin-top: 60px;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: #007aff;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-around;
+    }
+    nav ul li {
+        margin-left: 0;
+    }
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1.1em;
+    }
+    #about h2, #quick-links h2, #interest-list h2, #blog-posts h2, #highlight-list h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .logo {
+        margin-bottom: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul li {
+        margin-bottom: 8px;
+        width: 100%;
+    }
+    nav ul li a {
+        display: block;
+        padding: 8px;
+        background-color: rgba(240,240,240,0.8);
+        border-radius: 6px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+        border-bottom: none;
+        background-color: rgba(0, 122, 255, 0.1);
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+} 

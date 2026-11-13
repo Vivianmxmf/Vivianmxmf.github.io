@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found</title>
+  <meta name="robots" content="noindex">
+  <script>
+    // Sites that used to live under this domain moved to Vercel. Forward old links,
+    // deep ones included, keeping the rest of the path. Prefixes are lowercase.
+    (function () {
+      var moved = [
+        ["/who_is_vivian_webshell", "https://who-is-vivian-webshell.vercel.app"]
+      ];
+      var path = location.pathname;
+      var lower = path.toLowerCase();
+      for (var i = 0; i < moved.length; i++) {
+        var prefix = moved[i][0];
+        if (lower === prefix || lower.indexOf(prefix + "/") === 0) {
+          location.replace(moved[i][1] + (path.slice(prefix.length) || "/") + location.search + location.hash);
+          return;
+        }
+      }
+    })();
+  </script>
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px; box-sizing: border-box;
+           background: #fafafa; color: #222; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    a { color: #1a5fb4; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #121212; color: #e8e8e8; }
+      a { color: #8ab4f8; }
+    }
+  </style>
+</head>
+<body>
+  <p>Page not found. <a href="/">Go to the home page</a>.</p>
+</body>
+</html>
